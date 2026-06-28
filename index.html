@@ -7,11 +7,123 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header class="hero"><div><h1>🏆 تحدي توقعات كأس العالم 2026</h1><p>دور الـ32 بدأ الآن. توقّع نتيجة الوقت الأصلي، الفريق المتأهل، وطريقة التأهل.</p></div><div id="modeChip" class="status-chip">🟢 النقاط مفعّلة</div></header>
-    <section class="notice"><strong>المسابقة بدأت الآن:</strong> يتم احتساب النقاط ابتداءً من دور الـ32. يغلق التوقع قبل بداية المباراة بـ60 دقيقة. التوقيت الأساسي محفوظ بصيغة GMT، ويتم عرض توقيت الإمارات والسعودية للمساعدة.</section>
-    <main class="grid"><section><div class="card"><h2>⚽ مباريات الجولة الحالية</h2><div id="matchdayBar" class="matchday-bar"></div><form id="predictionForm"><div class="row"><input id="playerName" placeholder="👤 اكتب اسمك" required /><input id="whatsapp" placeholder="📱 رقم الواتساب اختياري" /></div><div id="matches">جاري تحميل المباريات...</div><button id="submitBtn" type="submit">إرسال التوقع</button></form></div><div class="card"><h2>📋 توقعات المشاركين وشرح النقاط</h2><table><thead><tr><th>الاسم</th><th>الجولة</th><th>المباراة</th><th>التوقع</th><th>المتأهل</th><th>النقاط</th></tr></thead><tbody id="predictionsBody"><tr><td colspan="6">لا توجد توقعات بعد</td></tr></tbody></table></div><div class="card"><h2>📌 النتائج</h2><table><thead><tr><th>المباراة</th><th>النتيجة</th><th>المتأهل</th><th>الحالة</th></tr></thead><tbody id="resultsBody"><tr><td colspan="4">لا توجد نتائج بعد</td></tr></tbody></table></div></section><aside><div class="card"><h2>📊 الإحصائيات</h2><div class="kpis"><div class="kpi"><b id="playersCount">0</b>المشاركون</div><div class="kpi"><b id="predictionsCount">0</b>التوقعات</div></div></div><div class="card rules"><h2>📊 نظام النقاط</h2>🎯 10 نقاط = النتيجة الصحيحة في الوقت الأصلي<br />✅ 5 نقاط = توقع الفائز أو التعادل في الوقت الأصلي<br />🏆 5 نقاط = توقع الفريق المتأهل<br />⏱ 3 نقاط = توقع طريقة التأهل<br />⚽ 2 نقطة = توقع أهداف فريق واحد بشكل صحيح</div><div class="card"><h2>🏅 جدول الترتيب</h2><table><thead><tr><th>#</th><th>الاسم</th><th>النقاط</th></tr></thead><tbody id="leaderboardBody"><tr><td colspan="3">سيظهر الترتيب بعد إدخال النتائج</td></tr></tbody></table></div><div class="card"><h2>🕒 التوقيت</h2><div class="small-note">التوقيت المحفوظ: GMT / UTC<br />العرض: توقيت الإمارات + توقيت السعودية.</div></div></aside></main>
-    <footer class="footer">يتم اختيار الجولة تلقائياً. ويمكن تغييرها من Google Sheets → Settings → ACTIVE_MATCHDAY</footer>
-  </div><div id="toast" class="toast"></div><script src="app.js"></script>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">FIFA WORLD CUP 2026</div>
+        <h1>🏆 تحدي توقعات دور الـ32</h1>
+        <p>توقع نتيجة الوقت الأصلي، الفريق المتأهل، وطريقة التأهل. النقاط مفعّلة من هذا الدور.</p>
+      </div>
+      <div id="modeChip" class="chip live">🟢 النقاط مفعّلة</div>
+    </header>
+
+    <section class="notice">
+      <strong>مهم:</strong>
+      التوقيت المعتمد في Google Sheets هو <b>GMT</b> كما هو، بدون تحويل خاطئ.
+      يتم عرض توقيت الإمارات والسعودية تلقائيًا. يغلق التوقع قبل المباراة بـ60 دقيقة.
+    </section>
+
+    <main class="layout">
+      <section class="main">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>⚽ مباريات الجولة الحالية</h2>
+            <div id="matchdayBar" class="matchday-bar"></div>
+          </div>
+
+          <form id="predictionForm">
+            <div class="form-grid">
+              <input id="playerName" placeholder="👤 اكتب اسمك" required />
+              <input id="whatsapp" placeholder="📱 رقم الواتساب اختياري" />
+            </div>
+            <div id="matches" class="matches">جاري تحميل المباريات...</div>
+            <button id="submitBtn" type="submit">إرسال التوقع</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h2>📋 توقعات المشاركين وشرح النقاط</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>الاسم</th>
+                  <th>الجولة</th>
+                  <th>المباراة</th>
+                  <th>التوقع</th>
+                  <th>المتأهل</th>
+                  <th>النقاط</th>
+                </tr>
+              </thead>
+              <tbody id="predictionsBody">
+                <tr><td colspan="6">لا توجد توقعات بعد</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>📌 النتائج</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>المباراة</th>
+                  <th>النتيجة</th>
+                  <th>المتأهل</th>
+                  <th>الحالة</th>
+                </tr>
+              </thead>
+              <tbody id="resultsBody">
+                <tr><td colspan="4">لا توجد نتائج بعد</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="panel">
+          <h2>📊 الإحصائيات</h2>
+          <div class="stats">
+            <div class="stat"><b id="playersCount">0</b><span>المشاركون</span></div>
+            <div class="stat"><b id="predictionsCount">0</b><span>التوقعات</span></div>
+          </div>
+        </div>
+
+        <div class="panel rules">
+          <h2>📊 نظام النقاط</h2>
+          <p>🎯 10 نقاط = النتيجة الصحيحة في الوقت الأصلي</p>
+          <p>✅ 5 نقاط = توقع الفائز أو التعادل في الوقت الأصلي</p>
+          <p>🏆 5 نقاط = توقع الفريق المتأهل</p>
+          <p>⏱ 3 نقاط = توقع طريقة التأهل</p>
+          <p>⚽ 2 نقطة = توقع أهداف فريق واحد بشكل صحيح</p>
+        </div>
+
+        <div class="panel">
+          <h2>🏅 جدول الترتيب</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>الاسم</th><th>النقاط</th></tr></thead>
+              <tbody id="leaderboardBody">
+                <tr><td colspan="3">سيظهر الترتيب بعد إدخال النتائج</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>🕒 التوقيت</h2>
+          <p class="small">المصدر: GMT كما هو مكتوب في Google Sheets.</p>
+          <p class="small">العرض: GMT + توقيت الإمارات + توقيت السعودية.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>World Cup Prediction Challenge · Version 2.0 Fixed GMT</footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
 </body>
 </html>
