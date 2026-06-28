@@ -1,43 +1,49 @@
-🏆 تحدي توقعات كأس العالم 2026
-بدأت المسابقة من دور الـ32. توقّع نتيجة الوقت الأصلي، الفريق المتأهل، وطريقة التأهل.
-🟢 النقاط مفعّلة
-المسابقة بدأت الآن: يتم احتساب النقاط ابتداءً من دور الـ32. يغلق التوقع قبل بداية المباراة بـ60 دقيقة. التوقيت الأساسي محفوظ بصيغة GMT، ويتم عرض توقيت الإمارات والسعودية للمساعدة.
-⚽ مباريات الجولة الحالية
-
-
-جاري تحميل المباريات...
-إرسال التوقع
-📋 توقعات المشاركين وشرح النقاط
-الاسم
-الجولة
-المباراة
-التوقع
-المتأهل
-النقاط
-لا توجد توقعات بعد
-📌 النتائج
-المباراة
-النتيجة
-المتأهل
-الحالة
-لا توجد نتائج بعد
-📊 الإحصائيات
-0
-المشاركون
-0
-التوقعات
-📊 نظام النقاط
-🎯 10 نقاط = النتيجة الصحيحة في الوقت الأصلي
-✅ 5 نقاط = توقع الفائز أو التعادل في الوقت الأصلي
-🏆 5 نقاط = توقع الفريق المتأهل
-⏱ 3 نقاط = توقع طريقة التأهل
-⚽ 2 نقطة = توقع أهداف فريق واحد بشكل صحيح
-🏅 جدول الترتيب
-#
-الاسم
-النقاط
-سيظهر الترتيب بعد إدخال النتائج
-🕒 التوقيت
-التوقيت المحفوظ: GMT / UTC
-العرض: توقيت الإمارات + توقيت السعودية.
-يتم اختيار الجولة تلقائياً. ويمكن تغييرها من Google Sheets → Settings → ACTIVE_MATCHDAY
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تحدي توقعات كأس العالم 2026</title>
+<style>
+:root{--gold:#ffd54a;--gold2:#c89a17;--green:#61ff9c;--red:#ff6b6b;--muted:#b7c8ec;--line:rgba(255,255,255,.16);--card:rgba(255,255,255,.08);--dark:#06142e}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Tahoma,sans-serif;color:#fff;background:radial-gradient(circle at 12% 10%,rgba(255,213,74,.18),transparent 32%),radial-gradient(circle at 90% 0%,rgba(64,144,255,.22),transparent 35%),linear-gradient(135deg,#06142e,#0b2d5f,#06142e);min-height:100vh}.container{max-width:1220px;margin:auto;padding:18px}.hero{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:28px;border-radius:30px;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.35);margin-bottom:18px}.hero h1{margin:0;font-size:36px;line-height:1.35}.hero p{margin:8px 0 0;color:var(--muted);line-height:1.8}.status-chip{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;background:rgba(97,255,156,.14);border:1px solid rgba(97,255,156,.35);color:var(--green);font-weight:bold;white-space:nowrap}.notice{background:linear-gradient(135deg,rgba(255,213,74,.2),rgba(255,255,255,.08));border:1px solid rgba(255,213,74,.45);border-radius:22px;padding:16px;margin-bottom:18px;line-height:1.9}.notice strong{color:var(--gold)}.grid{display:grid;grid-template-columns:1.42fr .58fr;gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;margin-bottom:18px;box-shadow:0 18px 45px rgba(0,0,0,.25);backdrop-filter:blur(8px)}.card h2{margin:0 0 14px;color:var(--gold)}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}input,select{width:100%;padding:14px;margin:7px 0;border:0;outline:0;border-radius:16px;font-size:15px;background:#fff;color:#06142e}button{width:100%;border:0;padding:17px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#06142e;font-size:20px;font-weight:bold;cursor:pointer;margin-top:12px}button:disabled{opacity:.6;cursor:wait}.matchday-bar{display:flex;gap:10px;overflow:auto;padding-bottom:8px;margin-bottom:14px}.matchday-pill{flex:0 0 auto;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid var(--line);cursor:pointer;color:var(--muted);font-weight:bold}.matchday-pill.active{background:var(--gold);color:#06142e}.match-card{background:linear-gradient(145deg,#12366f,#071b3c);border:1px solid rgba(255,213,74,.28);border-radius:22px;padding:16px;margin-bottom:14px}.match-top{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:13px;margin-bottom:12px}.teams{display:grid;grid-template-columns:1fr 70px 1fr;gap:12px;align-items:center}.team{text-align:center}.flag{font-size:38px;display:block;margin-bottom:7px}.name{font-weight:bold;font-size:18px;line-height:1.35}.vs{color:var(--gold);font-size:24px;font-weight:bold;text-align:center}.time-box{text-align:center;margin:14px 0;color:var(--muted);line-height:1.8}.time-box b{color:#fff;font-size:18px}.open,.closed{display:inline-block;border-radius:999px;padding:8px 11px;font-weight:bold;font-size:13px}.open{color:var(--green);background:rgba(97,255,156,.12);border:1px solid rgba(97,255,156,.28)}.closed{color:var(--red);background:rgba(255,107,107,.12);border:1px solid rgba(255,107,107,.28)}.score-grid{display:grid;grid-template-columns:1fr 44px 1fr;gap:10px;align-items:center}.score-grid input{text-align:center;margin:0}.sep{text-align:center;color:var(--gold);font-weight:bold;font-size:22px}.knockout-box{margin-top:12px;padding:12px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13)}.knockout-title{color:var(--gold);font-weight:bold;margin-bottom:8px}table{width:100%;border-collapse:collapse}th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,.12);text-align:center;font-size:13px}th{background:var(--gold);color:#06142e}.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px;text-align:center}.kpi b{display:block;font-size:28px;color:var(--gold)}.rules{line-height:1.9}.small-note{font-size:13px;color:var(--muted);line-height:1.8}.footer{text-align:center;color:var(--muted);font-size:13px;margin:22px 0}.toast{position:fixed;left:18px;bottom:18px;background:#0b2d5f;border:1px solid rgba(255,213,74,.35);color:white;padding:14px 16px;border-radius:18px;display:none;max-width:380px;box-shadow:0 18px 45px rgba(0,0,0,.45);z-index:1000}@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.teams{grid-template-columns:1fr}.vs{padding:4px 0}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero"><div><h1>🏆 تحدي توقعات كأس العالم 2026</h1><p>بدأت المسابقة من دور الـ32. توقّع نتيجة الوقت الأصلي، الفريق المتأهل، وطريقة التأهل.</p></div><div id="modeChip" class="status-chip">🟢 النقاط مفعّلة</div></div>
+  <div class="notice"><strong>المسابقة بدأت الآن:</strong> يتم احتساب النقاط ابتداءً من دور الـ32. يغلق التوقع قبل بداية المباراة بـ60 دقيقة. التوقيت الأساسي محفوظ بصيغة GMT، ويتم عرض توقيت الإمارات والسعودية للمساعدة.</div>
+  <div class="grid"><main>
+    <div class="card"><h2>⚽ مباريات الجولة الحالية</h2><div id="matchdayBar" class="matchday-bar"></div><form id="predictionForm"><div class="row"><input id="playerName" placeholder="👤 اكتب اسمك" required><input id="whatsapp" placeholder="📱 رقم الواتساب اختياري"></div><div id="matches">جاري تحميل المباريات...</div><button id="submitBtn" type="submit">إرسال التوقع</button></form></div>
+    <div class="card"><h2>📋 توقعات المشاركين وشرح النقاط</h2><table><thead><tr><th>الاسم</th><th>الجولة</th><th>المباراة</th><th>التوقع</th><th>المتأهل</th><th>النقاط</th></tr></thead><tbody id="predictionsBody"><tr><td colspan="6">لا توجد توقعات بعد</td></tr></tbody></table></div>
+    <div class="card"><h2>📌 النتائج</h2><table><thead><tr><th>المباراة</th><th>النتيجة</th><th>المتأهل</th><th>الحالة</th></tr></thead><tbody id="resultsBody"><tr><td colspan="4">لا توجد نتائج بعد</td></tr></tbody></table></div>
+  </main><aside>
+    <div class="card"><h2>📊 الإحصائيات</h2><div class="kpis"><div class="kpi"><b id="playersCount">0</b>المشاركون</div><div class="kpi"><b id="predictionsCount">0</b>التوقعات</div></div></div>
+    <div class="card rules"><h2>📊 نظام النقاط</h2>🎯 10 نقاط = النتيجة الصحيحة في الوقت الأصلي<br>✅ 5 نقاط = توقع الفائز أو التعادل في الوقت الأصلي<br>🏆 5 نقاط = توقع الفريق المتأهل<br>⏱ 3 نقاط = توقع طريقة التأهل<br>⚽ 2 نقطة = توقع أهداف فريق واحد بشكل صحيح</div>
+    <div class="card"><h2>🏅 جدول الترتيب</h2><table><thead><tr><th>#</th><th>الاسم</th><th>النقاط</th></tr></thead><tbody id="leaderboardBody"><tr><td colspan="3">سيظهر الترتيب بعد إدخال النتائج</td></tr></tbody></table></div>
+    <div class="card"><h2>🕒 التوقيت</h2><div class="small-note">التوقيت المحفوظ: GMT / UTC<br>العرض: توقيت الإمارات + توقيت السعودية.</div></div>
+  </aside></div><div class="footer">يتم اختيار الجولة تلقائياً. ويمكن تغييرها من Google Sheets → Settings → ACTIVE_MATCHDAY</div>
+</div><div id="toast" class="toast"></div>
+<script>
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzqMb4D1XPrWO6egLnEpkpHT6EW2B608XVnPD-qCtvJmYhvgu04q7b1ItwdNMrkejfBsw/exec";
+let matches=[];let matchdays=[];let submitting=false;
+const arNames={"South Africa":"جنوب أفريقيا","Canada":"كندا","Brazil":"البرازيل","Japan":"اليابان","Germany":"ألمانيا","Paraguay":"باراغواي","Netherlands":"هولندا","Morocco":"المغرب","Ivory Coast":"ساحل العاج","Norway":"النرويج","France":"فرنسا","Sweden":"السويد","Mexico":"المكسيك","Ecuador":"الإكوادور","England":"إنجلترا","DR Congo":"الكونغو الديمقراطية","Belgium":"بلجيكا","Senegal":"السنغال","United States":"أمريكا","Bosnia and Herzegovina":"البوسنة والهرسك","Spain":"إسبانيا","Austria":"النمسا","Portugal":"البرتغال","Croatia":"كرواتيا","Switzerland":"سويسرا","Algeria":"الجزائر","Egypt":"مصر","Australia":"أستراليا","Argentina":"الأرجنتين","Cape Verde":"الرأس الأخضر","Colombia":"كولومبيا","Ghana":"غانا"};
+const methodNames={"90":"الوقت الأصلي","120":"الوقت الإضافي","PEN":"ركلات الترجيح"};
+const reasonNames={"Exact 90-minute score":"النتيجة الصحيحة في الوقت الأصلي","Correct 90-minute outcome":"توقع الفائز أو التعادل صحيح","Team 1 goals correct":"أهداف الفريق الأول صحيحة","Team 2 goals correct":"أهداف الفريق الثاني صحيحة","Qualified team correct":"الفريق المتأهل صحيح","Qualification method correct":"طريقة التأهل صحيحة","Wrong prediction":"توقع غير صحيح","Trial mode - points are not counted":"تجريبي — لا تُحتسب النقاط"};
+const flags={"South Africa":"🇿🇦","Canada":"🇨🇦","Brazil":"🇧🇷","Japan":"🇯🇵","Germany":"🇩🇪","Paraguay":"🇵🇾","Netherlands":"🇳🇱","Morocco":"🇲🇦","Ivory Coast":"🇨🇮","Norway":"🇳🇴","France":"🇫🇷","Sweden":"🇸🇪","Mexico":"🇲🇽","Ecuador":"🇪🇨","England":"🏴","DR Congo":"🇨🇩","Belgium":"🇧🇪","Senegal":"🇸🇳","United States":"🇺🇸","Bosnia and Herzegovina":"🇧🇦","Spain":"🇪🇸","Austria":"🇦🇹","Portugal":"🇵🇹","Croatia":"🇭🇷","Switzerland":"🇨🇭","Algeria":"🇩🇿","Egypt":"🇪🇬","Australia":"🇦🇺","Argentina":"🇦🇷","Cape Verde":"🇨🇻","Colombia":"🇨🇴","Ghana":"🇬🇭"};
+function teamName(team){const t=String(team||"").trim();return arNames[t]||t||"-";}function flagOf(team){return flags[String(team||"").trim()]||"🏳️";}function methodName(method){return methodNames[String(method||"").trim()]||method||"-";}function translateReason(reason){let txt=String(reason||"");Object.keys(reasonNames).forEach(k=>{txt=txt.replaceAll(k,reasonNames[k]);});return txt||"";}function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.style.display="block";setTimeout(()=>t.style.display="none",3500);}function toDateGMT(m){return new Date(m.date+"T"+m.time+":00Z");}function formatLocal(m,zone){return toDateGMT(m).toLocaleString("ar-AE",{timeZone:zone,weekday:"short",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false});}function isClosed(m){if(m.closed===true)return true;const close=new Date(toDateGMT(m).getTime()-60*60*1000);return Date.now()>=close.getTime();}function countdownText(m){const start=toDateGMT(m),close=new Date(start.getTime()-60*60*1000),now=new Date();if(now>=start)return"🔴 بدأت المباراة";if(now>=close)return"🔒 مغلق";const diff=close-now,h=Math.floor(diff/3600000),mn=Math.floor((diff%3600000)/60000);return"⏳ "+h+"س "+mn+"د";}
+async function loadSettings(){try{const r=await fetch(GOOGLE_SCRIPT_URL+"?action=settings&v="+Date.now());const s=await r.json();document.getElementById("modeChip").textContent=s.trialMode?"⚠️ وضع تجريبي":"🟢 النقاط مفعّلة";}catch(e){console.log(e);}}
+async function loadMatchdays(){try{const r=await fetch(GOOGLE_SCRIPT_URL+"?action=matchdays&v="+Date.now());matchdays=await r.json();renderMatchdayBar();}catch(e){console.log(e);}}
+function renderMatchdayBar(){const bar=document.getElementById("matchdayBar");if(!matchdays||matchdays.length===0){bar.innerHTML="";return;}const active=matches[0]?matches[0].matchday:"";bar.innerHTML="";matchdays.forEach(md=>{const div=document.createElement("div");div.className="matchday-pill"+(md.matchday===active?" active":"");div.textContent=md.matchday+" · "+(md.count||0)+" مباريات";div.onclick=()=>showToast("يمكن تغيير الجولة من Google Sheets: Settings → ACTIVE_MATCHDAY");bar.appendChild(div);});}
+async function loadMatches(){const box=document.getElementById("matches");box.innerHTML="جاري تحميل المباريات...";try{const r=await fetch(GOOGLE_SCRIPT_URL+"?v="+Date.now());matches=await r.json();renderMatches();renderMatchdayBar();}catch(e){box.innerHTML="❌ فشل تحميل المباريات. تأكد من رابط Apps Script ومن النشر Web App.";}}
+function renderMatches(){const box=document.getElementById("matches");if(!matches||matches.length===0){box.innerHTML="لا توجد مباريات في هذه الجولة.";return;}box.innerHTML="";matches.forEach((m,i)=>{const closed=isClosed(m);box.innerHTML+=`<div class="match-card"><div class="match-top"><span>${m.matchday} · ${m.stage||""}</span><span>${m.id}</span></div><div class="teams"><div class="team"><span class="flag">${flagOf(m.home)}</span><div class="name">${teamName(m.home)}</div></div><div class="vs">VS</div><div class="team"><span class="flag">${flagOf(m.away)}</span><div class="name">${teamName(m.away)}</div></div></div><div class="time-box"><b>${m.date} · ${m.time} GMT</b><br>توقيت الإمارات: ${formatLocal(m,"Asia/Dubai")}<br>توقيت السعودية: ${formatLocal(m,"Asia/Riyadh")}<br><span class="${closed?"closed":"open"}">${countdownText(m)}</span></div>${closed?`<div class="closed">🔒 التوقع مغلق</div>`:`<div class="score-grid"><input type="number" min="0" max="30" id="home_${i}" placeholder="أهداف ${teamName(m.home)}"><div class="sep">-</div><input type="number" min="0" max="30" id="away_${i}" placeholder="أهداف ${teamName(m.away)}"></div><div class="knockout-box"><div class="knockout-title">🏆 توقع خروج المغلوب</div><div class="row"><select id="qualified_${i}"><option value="">اختر الفريق المتأهل</option><option value="${m.home}">${teamName(m.home)}</option><option value="${m.away}">${teamName(m.away)}</option></select><select id="method_${i}"><option value="">اختر طريقة التأهل</option><option value="90">الوقت الأصلي</option><option value="120">الوقت الإضافي</option><option value="PEN">ركلات الترجيح</option></select></div></div>`}</div>`;});}
+document.getElementById("predictionForm").addEventListener("submit",async function(e){e.preventDefault();if(submitting)return;const playerName=document.getElementById("playerName").value.trim(),whatsapp=document.getElementById("whatsapp").value.trim(),btn=document.getElementById("submitBtn");if(!playerName){showToast("اكتب اسمك أولاً.");return;}const predictions=[];for(let i=0;i<matches.length;i++){const m=matches[i];if(isClosed(m))continue;const home=document.getElementById("home_"+i),away=document.getElementById("away_"+i),qualified=document.getElementById("qualified_"+i),method=document.getElementById("method_"+i);if(!home||!away||!qualified||!method)continue;if(home.value===""||away.value===""||qualified.value===""||method.value===""){showToast("أكمل النتيجة والفريق المتأهل وطريقة التأهل لكل مباراة مفتوحة.");return;}predictions.push({id:m.id,homeGoals:home.value,awayGoals:away.value,qualified:qualified.value,method:method.value});}if(predictions.length===0){showToast("لا توجد مباريات مفتوحة للتوقع.");return;}submitting=true;btn.disabled=true;btn.textContent="جاري الإرسال...";try{await fetch(GOOGLE_SCRIPT_URL,{method:"POST",mode:"no-cors",body:JSON.stringify({playerName,whatsapp,predictions})});showToast("✅ تم إرسال التوقع بنجاح.");this.reset();setTimeout(()=>{loadStats();loadLeaderboard();loadPredictions();},1500);}catch(err){showToast("❌ فشل إرسال التوقع.");}finally{submitting=false;btn.disabled=false;btn.textContent="إرسال التوقع";}});
+async function loadLeaderboard(){try{const r=await fetch(GOOGLE_SCRIPT_URL+"?action=leaderboard&v="+Date.now()),data=await r.json(),body=document.getElementById("leaderboardBody");body.innerHTML="";if(!data||data.length===0){body.innerHTML=`<tr><td colspan="3">سيظهر الترتيب بعد إدخال النتائج</td></tr>`;return;}data.slice(0,20).forEach((p,i)=>{const medal=i===0?"🥇":i===1?"🥈":i===2?"🥉":p.rank;body.innerHTML+=`<tr><td>${medal}</td><td>${p.name||"-"}</td><td>${p.points||0}</td></tr>`;});}catch(e){console.log(e);}}
+async function loadResults(){try{const r=await fetch(GOOGLE_SCRIPT_URL+"?action=results&v="+Date.now()),data=await r.json(),body=document.getElementById("resultsBody");body.innerHTML="";if(!data||data.length===0){body.innerHTML=`<tr><td colspan="4">لا توجد نتائج بعد</td></tr>`;return;}data.slice(0,30).forEach(item=>{body.innerHTML+=`<tr><td>${translateMatch(item.match||item.id)}</td><td>${item.result||"-"}</td><td>${teamName(item.qualified)}</td><td>${item.status||"-"}</td></tr>`;});}catch(e){console.log(e);}}
+function translateMatch(matchText){let txt=String(matchText||"");Object.keys(arNames).forEach(en=>{txt=txt.replaceAll(en,arNames[en]);});txt=txt.replaceAll(" vs "," × ");return txt;}
+async function loadPredictions(){try{const r=await fetch(GOOGLE_SCRIPT_URL+"?action=predictions&v="+Date.now()),data=await r.json(),body=document.getElementById("predictionsBody");body.innerHTML="";if(!data||data.length===0){body.innerHTML=`<tr><td colspan="6">لا توجد توقعات بعد</td></tr>`;return;}data.slice(0,50).forEach(item=>{body.innerHTML+=`<tr><td>${item.name||"-"}</td><td>${item.matchday||"-"}</td><td>${translateMatch(item.match||"-")}</td><td>${item.prediction||"-"}</td><td>${teamName(item.qualified)}</td><td><b>${item.points||0}</b><br><small>${translateReason(item.reason||"")}</small></td></tr>`;});}catch(e){console.log(e);}}
+async function loadStats(){try{const r=await fetch(GOOGLE_SCRIPT_URL+"?action=stats&v="+Date.now()),data=await r.json();document.getElementById("playersCount").textContent=data.playersCount||0;document.getElementById("predictionsCount").textContent=data.predictionsCount||0;}catch(e){console.log(e);}}
+loadSettings();loadMatches();loadMatchdays();loadLeaderboard();loadResults();loadPredictions();loadStats();setInterval(renderMatches,60000);setInterval(loadLeaderboard,60000);setInterval(loadResults,60000);setInterval(loadPredictions,60000);setInterval(loadStats,60000);
+</script>
+</body>
+</html>
